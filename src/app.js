@@ -12,7 +12,7 @@ app.use(cors());
 const repositories = [];
 
 app.get("/repositories", (request, response) => {
-  // TODO
+  return response.status(200).json(repositories);
 });
 
 app.post("/repositories", (request, response) => {
@@ -27,7 +27,7 @@ app.post("/repositories", (request, response) => {
   }
 
   repositories.push(repository);
-  
+
   return response.status(200).json(repository);
 });
 
